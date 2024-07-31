@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -46,6 +47,7 @@
 			this.grafico3D = new System.Windows.Forms.CheckBox();
 			this.btnAleatorio = new System.Windows.Forms.Button();
 			this.grafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.timer = new System.Windows.Forms.Timer(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.dataValores)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.grafico)).BeginInit();
 			this.SuspendLayout();
@@ -209,6 +211,11 @@
 			this.grafico.TabIndex = 13;
 			this.grafico.Text = "chart1";
 			// 
+			// timer
+			// 
+			this.timer.Interval = 500;
+			this.timer.Tick += new System.EventHandler(this.timer_Tick);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +261,7 @@
 		private System.Windows.Forms.CheckBox grafico3D;
 		private System.Windows.Forms.Button btnAleatorio;
 		private System.Windows.Forms.DataVisualization.Charting.Chart grafico;
+		private System.Windows.Forms.Timer timer;
 	}
 }
 
