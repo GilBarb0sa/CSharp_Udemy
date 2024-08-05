@@ -122,7 +122,7 @@ namespace Graficos
 			grafico.ChartAreas[0].Area3DStyle.Enable3D = grafico3D.Checked;
 		}
 
-		private void btnAleatorio_Click(object sender, EventArgs e)
+		private void btnAleatorio_Click(object sender, EventArgs e) 
 		{
 			timer.Enabled = !timer.Enabled;
 		}
