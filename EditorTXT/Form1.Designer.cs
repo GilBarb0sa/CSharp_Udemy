@@ -87,48 +87,54 @@
 			// mArquivoNovo
 			// 
 			mArquivoNovo.Name = "mArquivoNovo";
-			mArquivoNovo.Size = new Size(171, 26);
+			mArquivoNovo.Size = new Size(180, 26);
 			mArquivoNovo.Text = "Novo";
+			mArquivoNovo.Click += mArquivoNovo_Click;
 			// 
 			// mArquivoNovaJanela
 			// 
 			mArquivoNovaJanela.Name = "mArquivoNovaJanela";
-			mArquivoNovaJanela.Size = new Size(171, 26);
+			mArquivoNovaJanela.Size = new Size(180, 26);
 			mArquivoNovaJanela.Text = "Nova Janela";
+			mArquivoNovaJanela.Click += mArquivoNovaJanela_Click;
 			// 
 			// toolStripSeparator1
 			// 
 			toolStripSeparator1.Name = "toolStripSeparator1";
-			toolStripSeparator1.Size = new Size(168, 6);
+			toolStripSeparator1.Size = new Size(177, 6);
 			// 
 			// mArquivoAbrir
 			// 
 			mArquivoAbrir.Name = "mArquivoAbrir";
-			mArquivoAbrir.Size = new Size(171, 26);
+			mArquivoAbrir.Size = new Size(180, 26);
 			mArquivoAbrir.Text = "Abrir";
+			mArquivoAbrir.Click += mArquivoAbrir_Click;
 			// 
 			// mArquivoSalvar
 			// 
 			mArquivoSalvar.Name = "mArquivoSalvar";
-			mArquivoSalvar.Size = new Size(171, 26);
+			mArquivoSalvar.Size = new Size(180, 26);
 			mArquivoSalvar.Text = "Salvar";
+			mArquivoSalvar.Click += mArquivoSalvar_Click;
 			// 
 			// mArquivoSalvarComo
 			// 
 			mArquivoSalvarComo.Name = "mArquivoSalvarComo";
-			mArquivoSalvarComo.Size = new Size(171, 26);
+			mArquivoSalvarComo.Size = new Size(180, 26);
 			mArquivoSalvarComo.Text = "Salvar Como";
+			mArquivoSalvarComo.Click += mArquivoSalvarComo_Click;
 			// 
 			// toolStripSeparator2
 			// 
 			toolStripSeparator2.Name = "toolStripSeparator2";
-			toolStripSeparator2.Size = new Size(168, 6);
+			toolStripSeparator2.Size = new Size(177, 6);
 			// 
 			// mArquivoSair
 			// 
 			mArquivoSair.Name = "mArquivoSair";
-			mArquivoSair.Size = new Size(171, 26);
+			mArquivoSair.Size = new Size(180, 26);
 			mArquivoSair.Text = "Sair";
+			mArquivoSair.Click += mArquivoSair_Click;
 			// 
 			// mEditar
 			// 
@@ -225,19 +231,19 @@
 			// mExibirZoomAmpliar
 			// 
 			mExibirZoomAmpliar.Name = "mExibirZoomAmpliar";
-			mExibirZoomAmpliar.Size = new Size(180, 26);
+			mExibirZoomAmpliar.Size = new Size(149, 26);
 			mExibirZoomAmpliar.Text = "Ampliar";
 			// 
 			// mExibirZoomReduzir
 			// 
 			mExibirZoomReduzir.Name = "mExibirZoomReduzir";
-			mExibirZoomReduzir.Size = new Size(180, 26);
+			mExibirZoomReduzir.Size = new Size(149, 26);
 			mExibirZoomReduzir.Text = "Reduzir";
 			// 
 			// mExibirZoomRestaurar
 			// 
 			mExibirZoomRestaurar.Name = "mExibirZoomRestaurar";
-			mExibirZoomRestaurar.Size = new Size(180, 26);
+			mExibirZoomRestaurar.Size = new Size(149, 26);
 			mExibirZoomRestaurar.Text = "Restaurar";
 			// 
 			// mExibirBarraStatus
