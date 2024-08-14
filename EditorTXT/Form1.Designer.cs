@@ -1,4 +1,5 @@
-﻿namespace EditorTXT
+﻿
+namespace EditorTXT
 {
 	partial class Form1
 	{
@@ -49,7 +50,7 @@
 			toolStripSeparator4 = new ToolStripSeparator();
 			mEditarDataHora = new ToolStripMenuItem();
 			mFormatar = new ToolStripMenuItem();
-			mFormatarQuebraAutoLinha = new ToolStripMenuItem();
+			mFormatarQuebraLinha = new ToolStripMenuItem();
 			mFormatarFonte = new ToolStripMenuItem();
 			mExibir = new ToolStripMenuItem();
 			mExibirZoom = new ToolStripMenuItem();
@@ -146,80 +147,83 @@
 			// mEditarDesfazer
 			// 
 			mEditarDesfazer.Name = "mEditarDesfazer";
-			mEditarDesfazer.Size = new Size(180, 26);
+			mEditarDesfazer.Size = new Size(166, 26);
 			mEditarDesfazer.Text = "Desfazer";
 			mEditarDesfazer.Click += mEditarDesfazer_Click;
 			// 
 			// mEditarRefazer
 			// 
 			mEditarRefazer.Name = "mEditarRefazer";
-			mEditarRefazer.Size = new Size(180, 26);
+			mEditarRefazer.Size = new Size(166, 26);
 			mEditarRefazer.Text = "Refazer";
 			mEditarRefazer.Click += mEditarRefazer_Click;
 			// 
 			// toolStripSeparator3
 			// 
 			toolStripSeparator3.Name = "toolStripSeparator3";
-			toolStripSeparator3.Size = new Size(177, 6);
+			toolStripSeparator3.Size = new Size(163, 6);
 			// 
 			// mEditarRecortar
 			// 
 			mEditarRecortar.Name = "mEditarRecortar";
-			mEditarRecortar.Size = new Size(180, 26);
+			mEditarRecortar.Size = new Size(166, 26);
 			mEditarRecortar.Text = "Recortar";
 			mEditarRecortar.Click += mEditarRecortar_Click;
 			// 
 			// mEditarCopiar
 			// 
 			mEditarCopiar.Name = "mEditarCopiar";
-			mEditarCopiar.Size = new Size(180, 26);
+			mEditarCopiar.Size = new Size(166, 26);
 			mEditarCopiar.Text = "Copiar";
 			mEditarCopiar.Click += mEditarCopiar_Click;
 			// 
 			// mEditarColar
 			// 
 			mEditarColar.Name = "mEditarColar";
-			mEditarColar.Size = new Size(180, 26);
+			mEditarColar.Size = new Size(166, 26);
 			mEditarColar.Text = "Colar";
 			mEditarColar.Click += mEditarColar_Click;
 			// 
 			// mEditarExclui
 			// 
 			mEditarExclui.Name = "mEditarExclui";
-			mEditarExclui.Size = new Size(180, 26);
+			mEditarExclui.Size = new Size(166, 26);
 			mEditarExclui.Text = "Excluir";
 			mEditarExclui.Click += mEditarExclui_Click;
 			// 
 			// toolStripSeparator4
 			// 
 			toolStripSeparator4.Name = "toolStripSeparator4";
-			toolStripSeparator4.Size = new Size(177, 6);
+			toolStripSeparator4.Size = new Size(163, 6);
 			// 
 			// mEditarDataHora
 			// 
 			mEditarDataHora.Name = "mEditarDataHora";
-			mEditarDataHora.Size = new Size(180, 26);
+			mEditarDataHora.Size = new Size(166, 26);
 			mEditarDataHora.Text = "Data e Hora";
 			mEditarDataHora.Click += mEditarDataHora_Click;
 			// 
 			// mFormatar
 			// 
-			mFormatar.DropDownItems.AddRange(new ToolStripItem[] { mFormatarQuebraAutoLinha, mFormatarFonte });
+			mFormatar.DropDownItems.AddRange(new ToolStripItem[] { mFormatarQuebraLinha, mFormatarFonte });
 			mFormatar.Name = "mFormatar";
 			mFormatar.Size = new Size(88, 25);
 			mFormatar.Text = "Formatar";
 			// 
-			// mFormatarQuebraAutoLinha
+			// mFormatarQuebraLinha
 			// 
-			mFormatarQuebraAutoLinha.Name = "mFormatarQuebraAutoLinha";
-			mFormatarQuebraAutoLinha.Size = new Size(239, 26);
-			mFormatarQuebraAutoLinha.Text = "Quebra Auto de Linha";
+			mFormatarQuebraLinha.CheckOnClick = true;
+			mFormatarQuebraLinha.Name = "mFormatarQuebraLinha";
+			mFormatarQuebraLinha.Size = new Size(239, 26);
+			mFormatarQuebraLinha.Text = "Quebra Auto de Linha";
+			mFormatarQuebraLinha.Click += mFormatarQuebraLinha_Click;
 			// 
 			// mFormatarFonte
 			// 
 			mFormatarFonte.Name = "mFormatarFonte";
 			mFormatarFonte.Size = new Size(239, 26);
 			mFormatarFonte.Text = "Fonte";
+			mFormatarFonte.Click += mFormatarFonte_Click;
 			// 
 			// mExibir
 			// 
@@ -240,18 +244,21 @@
 			mExibirZoomAmpliar.Name = "mExibirZoomAmpliar";
 			mExibirZoomAmpliar.Size = new Size(149, 26);
 			mExibirZoomAmpliar.Text = "Ampliar";
+			mExibirZoomAmpliar.Click += mExibirZoomAmpliar_Click;
 			// 
 			// mExibirZoomReduzir
 			// 
 			mExibirZoomReduzir.Name = "mExibirZoomReduzir";
 			mExibirZoomReduzir.Size = new Size(149, 26);
 			mExibirZoomReduzir.Text = "Reduzir";
+			mExibirZoomReduzir.Click += mExibirZoomReduzir_Click;
 			// 
 			// mExibirZoomRestaurar
 			// 
 			mExibirZoomRestaurar.Name = "mExibirZoomRestaurar";
 			mExibirZoomRestaurar.Size = new Size(149, 26);
 			mExibirZoomRestaurar.Text = "Restaurar";
+			mExibirZoomRestaurar.Click += mExibirZoomRestaurar_Click;
 			// 
 			// mExibirBarraStatus
 			// 
@@ -261,6 +268,7 @@
 			mExibirBarraStatus.Name = "mExibirBarraStatus";
 			mExibirBarraStatus.Size = new Size(190, 26);
 			mExibirBarraStatus.Text = "Barra de Status";
+			mExibirBarraStatus.Click += mExibirBarraStatus_Click;
 			// 
 			// mAjuda
 			// 
@@ -304,6 +312,7 @@
 			txtConteudo.Size = new Size(684, 399);
 			txtConteudo.TabIndex = 2;
 			txtConteudo.Text = "";
+			txtConteudo.WordWrap = false;
 			txtConteudo.TextChanged += txtConteudo_TextChanged;
 			// 
 			// Form1
@@ -324,6 +333,11 @@
 			statusBar.PerformLayout();
 			ResumeLayout(false);
 			PerformLayout();
+		}
+
+		private void mFormatarQuebraAutoLinha_Click(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
 		}
 
 		#endregion
@@ -351,7 +365,7 @@
 		private ToolStripMenuItem mEditarExclui;
 		private ToolStripSeparator toolStripSeparator4;
 		private ToolStripMenuItem mEditarDataHora;
-		private ToolStripMenuItem mFormatarQuebraAutoLinha;
+		private ToolStripMenuItem mFormatarQuebraLinha;
 		private ToolStripMenuItem mFormatarFonte;
 		private ToolStripMenuItem mExibirZoom;
 		private ToolStripMenuItem mExibirZoomAmpliar;

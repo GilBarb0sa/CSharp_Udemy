@@ -156,7 +156,7 @@ namespace EditorTXT
 		#endregion
 
 		#region Menu Editar
-		
+
 		private void mEditarDesfazer_Click(object sender, EventArgs e)
 		{
 			txtConteudo.Undo();
@@ -219,5 +219,65 @@ namespace EditorTXT
 		}
 
 		#endregion
+
+		#region Menu Formatar	
+		private void mFormatarQuebraLinha_Click(object sender, EventArgs e)
+		{
+			txtConteudo.WordWrap = mFormatarQuebraLinha.Checked;
+		}
+
+		private void mFormatarFonte_Click(object sender, EventArgs e)
+		{
+			FontDialog fonte = new FontDialog();
+			fonte.ShowColor = true;
+			fonte.ShowEffects = true;
+
+			fonte.Font = txtConteudo.Font;
+			fonte.Color = txtConteudo.ForeColor;
+
+			DialogResult result = fonte.ShowDialog();
+
+			if (result == DialogResult.OK)
+			{
+				txtConteudo.Font = fonte.Font;
+				txtConteudo.ForeColor = fonte.Color;
+			}
+		}
+		#endregion
+
+		#region Menu Exibir
+		private void mExibirZoomAmpliar_Click(object sender, EventArgs e)
+		{
+			txtConteudo.ZoomFactor += 0.1f;
+			AtualizaZoomStatusBar(txtConteudo.ZoomFactor);
+			
+		}
+
+		private void mExibirZoomReduzir_Click(object sender, EventArgs e)
+		{
+			txtConteudo.ZoomFactor -= 0.1f;
+			AtualizaZoomStatusBar(txtConteudo.ZoomFactor);
+
+		}
+
+		private void mExibirZoomRestaurar_Click(object sender, EventArgs e)
+		{
+			txtConteudo.ZoomFactor = 1f;
+			AtualizaZoomStatusBar(txtConteudo.ZoomFactor);
+
+		}
+
+		private void mExibirBarraStatus_Click(object sender, EventArgs e)
+		{
+			statusBar.Visible = mExibirBarraStatus.Checked;
+		}
+
+		private void AtualizaZoomStatusBar(float zoom)
+		{
+			statusBarLabel.Text = $"{ Math.Round(zoom * 100)}%";
+		}
+		#endregion
+
 	}
+
 }
