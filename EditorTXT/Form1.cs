@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace EditorTXT
 {
 	public partial class Form1 : Form
@@ -250,7 +252,7 @@ namespace EditorTXT
 		{
 			txtConteudo.ZoomFactor += 0.1f;
 			AtualizaZoomStatusBar(txtConteudo.ZoomFactor);
-			
+
 		}
 
 		private void mExibirZoomReduzir_Click(object sender, EventArgs e)
@@ -274,10 +276,23 @@ namespace EditorTXT
 
 		private void AtualizaZoomStatusBar(float zoom)
 		{
-			statusBarLabel.Text = $"{ Math.Round(zoom * 100)}%";
+			statusBarLabel.Text = $"{Math.Round(zoom * 100)}%";
 		}
 		#endregion
 
+		#region Menu Ajuda
+		private void mAjudaExibirAjuda_Click(object sender, EventArgs e)
+		{
+			FormAjuda f = new FormAjuda();
+			f.Show();
+		}
+
+		private void mAjudaSobreEditor_Click(object sender, EventArgs e)
+		{
+			FormSobre f = new FormSobre();
+			f.Show();
+		}
+		#endregion
 	}
 
 }
