@@ -293,6 +293,14 @@ namespace EditorTXT
 			f.Show();
 		}
 		#endregion
-	}
 
+		#region ToolBar
+
+		//Barra Ferramentar - Novo
+		private void toolBarNovo_Click(object sender, EventArgs e)
+		{
+			mArquivoNovo_Click(sender, e);
+		}
+		#endregion
+	}
 }

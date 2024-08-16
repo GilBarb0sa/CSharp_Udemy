@@ -64,9 +64,22 @@ namespace EditorTXT
 			mAjudaSobreEditor = new ToolStripMenuItem();
 			statusBar = new StatusStrip();
 			statusBarLabel = new ToolStripStatusLabel();
+			toolStrip1 = new ToolStrip();
+			toolBarNovo = new ToolStripButton();
+			toolBarAbrir = new ToolStripButton();
+			toolBarSalvar = new ToolStripButton();
+			toolStripSeparator6 = new ToolStripSeparator();
+			toolBarFonte = new ToolStripButton();
+			toolStripSeparator5 = new ToolStripSeparator();
+			toolBarZoom = new ToolStripButton();
+			toolBarZoomDiminuir = new ToolStripButton();
+			toolBarZoomAumentar = new ToolStripButton();
+			toolStripSeparator7 = new ToolStripSeparator();
+			toolBarAjuda = new ToolStripButton();
 			txtConteudo = new RichTextBox();
 			menuBar.SuspendLayout();
 			statusBar.SuspendLayout();
+			toolStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
 			// menuBar
@@ -332,16 +345,127 @@ namespace EditorTXT
 			statusBarLabel.Size = new Size(38, 17);
 			statusBarLabel.Text = "100 %";
 			// 
+			// toolStrip1
+			// 
+			toolStrip1.Items.AddRange(new ToolStripItem[] { toolBarNovo, toolBarAbrir, toolBarSalvar, toolStripSeparator6, toolBarFonte, toolStripSeparator5, toolBarZoom, toolBarZoomDiminuir, toolBarZoomAumentar, toolStripSeparator7, toolBarAjuda });
+			toolStrip1.Location = new Point(0, 29);
+			toolStrip1.Name = "toolStrip1";
+			toolStrip1.Size = new Size(684, 28);
+			toolStrip1.TabIndex = 3;
+			toolStrip1.Text = "toolStrip1";
+			// 
+			// toolBarNovo
+			// 
+			toolBarNovo.DisplayStyle = ToolStripItemDisplayStyle.Image;
+			toolBarNovo.Image = Properties.Resources.new_document;
+			toolBarNovo.ImageTransparentColor = Color.Magenta;
+			toolBarNovo.Name = "toolBarNovo";
+			toolBarNovo.Size = new Size(23, 25);
+			toolBarNovo.Text = "Novo";
+			toolBarNovo.Click += toolBarNovo_Click;
+			// 
+			// toolBarAbrir
+			// 
+			toolBarAbrir.DisplayStyle = ToolStripItemDisplayStyle.Image;
+			toolBarAbrir.Image = Properties.Resources.folder;
+			toolBarAbrir.ImageTransparentColor = Color.Magenta;
+			toolBarAbrir.Name = "toolBarAbrir";
+			toolBarAbrir.Size = new Size(23, 25);
+			toolBarAbrir.Text = "Abrir";
+			toolBarAbrir.Click += mArquivoAbrir_Click;
+			// 
+			// toolBarSalvar
+			// 
+			toolBarSalvar.DisplayStyle = ToolStripItemDisplayStyle.Image;
+			toolBarSalvar.Image = Properties.Resources.save;
+			toolBarSalvar.ImageTransparentColor = Color.Magenta;
+			toolBarSalvar.Name = "toolBarSalvar";
+			toolBarSalvar.Size = new Size(23, 25);
+			toolBarSalvar.Text = "Salvar";
+			toolBarSalvar.Click += mArquivoSalvar_Click;
+			// 
+			// toolStripSeparator6
+			// 
+			toolStripSeparator6.Name = "toolStripSeparator6";
+			toolStripSeparator6.Size = new Size(6, 28);
+			// 
+			// toolBarFonte
+			// 
+			toolBarFonte.DisplayStyle = ToolStripItemDisplayStyle.Text;
+			toolBarFonte.Font = new Font("Tempus Sans ITC", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			toolBarFonte.Image = (Image)resources.GetObject("toolBarFonte.Image");
+			toolBarFonte.ImageTransparentColor = Color.Magenta;
+			toolBarFonte.Name = "toolBarFonte";
+			toolBarFonte.Size = new Size(23, 25);
+			toolBarFonte.Text = "A";
+			toolBarFonte.ToolTipText = "Formatar Fonte";
+			toolBarFonte.Click += mFormatarFonte_Click;
+			// 
+			// toolStripSeparator5
+			// 
+			toolStripSeparator5.Name = "toolStripSeparator5";
+			toolStripSeparator5.Size = new Size(6, 28);
+			// 
+			// toolBarZoom
+			// 
+			toolBarZoom.DisplayStyle = ToolStripItemDisplayStyle.Image;
+			toolBarZoom.Image = Properties.Resources.loupe;
+			toolBarZoom.ImageTransparentColor = Color.Magenta;
+			toolBarZoom.Name = "toolBarZoom";
+			toolBarZoom.Size = new Size(23, 25);
+			toolBarZoom.Text = "Zoom 100%";
+			toolBarZoom.Click += mExibirZoomRestaurar_Click;
+			// 
+			// toolBarZoomDiminuir
+			// 
+			toolBarZoomDiminuir.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			toolBarZoomDiminuir.ForeColor = Color.Navy;
+			toolBarZoomDiminuir.Image = Properties.Resources.loupe;
+			toolBarZoomDiminuir.ImageTransparentColor = Color.Magenta;
+			toolBarZoomDiminuir.Name = "toolBarZoomDiminuir";
+			toolBarZoomDiminuir.Size = new Size(23, 25);
+			toolBarZoomDiminuir.Text = "-";
+			toolBarZoomDiminuir.TextImageRelation = TextImageRelation.Overlay;
+			toolBarZoomDiminuir.ToolTipText = "Zoom Diminuir";
+			toolBarZoomDiminuir.Click += mExibirZoomReduzir_Click;
+			// 
+			// toolBarZoomAumentar
+			// 
+			toolBarZoomAumentar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			toolBarZoomAumentar.ForeColor = Color.Navy;
+			toolBarZoomAumentar.Image = Properties.Resources.loupe;
+			toolBarZoomAumentar.ImageTransparentColor = Color.Magenta;
+			toolBarZoomAumentar.Name = "toolBarZoomAumentar";
+			toolBarZoomAumentar.Size = new Size(25, 25);
+			toolBarZoomAumentar.Text = "+";
+			toolBarZoomAumentar.TextImageRelation = TextImageRelation.Overlay;
+			toolBarZoomAumentar.ToolTipText = "Zoom Aumentar";
+			toolBarZoomAumentar.Click += mExibirZoomAmpliar_Click;
+			// 
+			// toolStripSeparator7
+			// 
+			toolStripSeparator7.Name = "toolStripSeparator7";
+			toolStripSeparator7.Size = new Size(6, 28);
+			// 
+			// toolBarAjuda
+			// 
+			toolBarAjuda.DisplayStyle = ToolStripItemDisplayStyle.Image;
+			toolBarAjuda.Image = Properties.Resources.help;
+			toolBarAjuda.ImageTransparentColor = Color.Magenta;
+			toolBarAjuda.Name = "toolBarAjuda";
+			toolBarAjuda.Size = new Size(23, 25);
+			toolBarAjuda.Text = "Ajuda";
+			toolBarAjuda.Click += mAjudaExibirAjuda_Click;
+			// 
 			// txtConteudo
 			// 
 			txtConteudo.Dock = DockStyle.Fill;
-			txtConteudo.Location = new Point(0, 29);
+			txtConteudo.Location = new Point(0, 57);
 			txtConteudo.Name = "txtConteudo";
-			txtConteudo.Size = new Size(684, 399);
-			txtConteudo.TabIndex = 2;
-			txtConteudo.Text = "";
+			txtConteudo.Size = new Size(684, 371);
+			txtConteudo.TabIndex = 4;
+			txtConteudo.Text = " ";
 			txtConteudo.WordWrap = false;
-			txtConteudo.TextChanged += txtConteudo_TextChanged;
 			// 
 			// Form1
 			// 
@@ -349,6 +473,7 @@ namespace EditorTXT
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(684, 450);
 			Controls.Add(txtConteudo);
+			Controls.Add(toolStrip1);
 			Controls.Add(statusBar);
 			Controls.Add(menuBar);
 			Icon = (Icon)resources.GetObject("$this.Icon");
@@ -360,6 +485,8 @@ namespace EditorTXT
 			menuBar.PerformLayout();
 			statusBar.ResumeLayout(false);
 			statusBar.PerformLayout();
+			toolStrip1.ResumeLayout(false);
+			toolStrip1.PerformLayout();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -405,6 +532,18 @@ namespace EditorTXT
 		private ToolStripMenuItem mAjudaSobreEditor;
 		private StatusStrip statusBar;
 		private ToolStripStatusLabel statusBarLabel;
+		private ToolStrip toolStrip1;
+		private ToolStripButton toolBarNovo;
 		private RichTextBox txtConteudo;
+		private ToolStripButton toolBarAbrir;
+		private ToolStripButton toolBarSalvar;
+		private ToolStripSeparator toolStripSeparator6;
+		private ToolStripButton toolBarFonte;
+		private ToolStripSeparator toolStripSeparator5;
+		private ToolStripButton toolBarZoom;
+		private ToolStripButton toolBarZoomDiminuir;
+		private ToolStripButton toolBarZoomAumentar;
+		private ToolStripSeparator toolStripSeparator7;
+		private ToolStripButton toolBarAjuda;
 	}
 }
